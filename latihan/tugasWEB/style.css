@@ -1,0 +1,56 @@
+.navbar-brand {
+    padding-top: 5px;
+
+}
+
+.banner {
+    background-image: url(bb.jpeg);
+    background-size: cover;
+    padding-top: 16rem;
+    padding-left: 0%;
+    padding-right: 0%;
+    color: #f8fbff;
+}
+
+.program {
+    padding-top: 1%;
+    padding-bottom: 1%;
+
+}
+
+.kelas {
+    padding-top: 5%;
+    padding-bottom: 1%;
+}
+
+.lengkung {
+    width: 12rem;
+}
+
+.display-3 {
+    padding-top: 10%;
+
+}
+
+.lingkaran {
+    display: inline-block;
+    border-radius: 50%;
+    width: 150px;
+    margin: auto;
+    height: 150px;
+    color: aliceblue;
+    background-color: #26e6bc;
+}
+
+.lingkaran i {
+    position: relative;
+    top: 30px;
+}
+
+.card {
+    object-fit: cover;
+}
+
+.staff {
+    padding-bottom: 10rem;
+}
