@@ -1,0 +1,63 @@
+.navbar-brand {
+    padding-top: 2px;
+
+}
+.navbar{
+    color: #26e6bc;
+}
+.banner {
+    padding-top: 1%;
+    color: #f8fbff;
+}
+.jumbotron{
+    
+    background-color: #ffffff;
+}
+
+.program {
+    padding-top: 1%;
+    padding-bottom: 1%;
+
+}
+
+.kelas {
+    padding-top: 5%;
+    padding-bottom: 1%;
+}
+
+.lengkung {
+    width: 12rem;
+}
+
+.display-3 {
+    padding-top: 7%;
+
+}
+
+.lingkaran {
+    display: inline-block;
+    border-radius: 50%;
+    width: 150px;
+    margin: auto;
+    height: 150px;
+    color: aliceblue;
+    background-color: #26e6bc;
+}
+
+.lingkaran i {
+    position: relative;
+    top: 30px;
+}
+
+.card {
+    object-fit: cover;
+}
+.p {
+    padding-bottom: 10%;
+}
+
+.staff {
+    padding-bottom: 10rem;
+    padding-top: 3rem;
+
+}
