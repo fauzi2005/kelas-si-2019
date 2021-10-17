@@ -36,6 +36,7 @@
 
 .lingkaran {
     display: inline-block;
+    border: none;
     border-radius: 50%;
     width: 150px;
     margin: auto;
@@ -58,7 +59,15 @@
 
 .staff {
     padding-bottom: 10rem;
-    padding-top: 3rem;
+    /* padding-top: 3rem; */
+    margin-top: -10%;
+
+}
+
+.contact {
+    padding-bottom: 10rem;
+    /* padding-top: 3rem; */
+    margin-top: -10%;
 
 }
 
