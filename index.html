@@ -1,114 +1,688 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelas S5I | UNINDRA Teknik Informatika</title>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Class</title>
+  <link rel="shortcut icon" href="../assets/images/logo-si.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- CSS DataTables -->
+  <link rel="stylesheet" type="text/css" href="../assets/DataTables-bs5/datatables.min.css">
+  
+  <style>
+    .button-datatables-file{
+      background-color: seagreen;      margin-bottom: 10px;
+      margin-right: 2px;
+      border: none;
+      border-radius: 10px;
+      transition: all .2s ease-in-out;
+    }
+    .button-datatables-file:hover{
+      background-color: #21633e;
+      transform: scale(1.3);
+    }
+    .button-datatables{
+      background-color: rgba(0, 0, 0, 0);
+      color: #000;
+      border: none;
+      margin-bottom: 10px;
+      margin-right: 2px;
+    }
+    .button-datatables:hover {
+      background-color: rgba(0, 0, 0, 0);
+      color: #000;
+      border: none
+    }
+  </style>
 
-    <!-- <link rel="stylesheet" href="assets/DataTables/datatables.min.css"> -->
-    <link rel="stylesheet" href="assets/bootstrap-5.1.2/dist/css/bootstrap.min.css">
 </head>
 <body>
+    
     <!-- START NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top" style="background-color: rgb(255, 255, 255);">
       <div class="container">
-          <a class="navbar-brand">
-              <img src="assets/bootstrap-5.1.2-examples/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24">
-          </a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <a class="navbar-brand" href="#beranda" style="font-family: Arial Rounded MT; font-size: 35px; color: rgb(48, 130, 253);">Learning Class S5I</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-start" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="#beranda" style="color: rgb(48, 130, 253);"><b>Home</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">About Us</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Schedule
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Jadwal Matkul</a></li>
-                <li><a class="dropdown-item" href="https://sika.unindra.ac.id" target="_blank">Absen</a></li>
-              </ul>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
-            </li> -->
+              <a class="nav-link active"  aria-current="page" href="#tentangkami" style="color: rgb(48, 130, 253);"><b>About Us</b></a>
+            </li>   
             <li class="nav-item">
-              <a class="nav-link" href="#">Mahasiswa/i</a>
+              <a class="nav-link active" aria-current="page" href="#program"  style="color: rgb(48, 130, 253);"><b>Schedule</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link active" aria-current="page" href="#kelas"  style="color: rgb(48, 130, 253);"><b>Mahasiswa/i</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active"  aria-current="page" href="#team"  style="color: rgb(48, 130, 253);"><b>Team</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active"  aria-current="page" href="#contact-us"  style="color: rgb(48, 130, 253);"><b>Contact Us</b></a>
             </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+          <form class="d-flex" action="#">
+            <input class="form-control me-3 pt-1 pb-1" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-dark btn-lg" type="submit">Search</button>
           </form>
         </div>
       </div>
     </nav>
     <!-- END NAVBAR -->
-    <div class="label" id="contact"></div>
 
-    <main>
+    <audio id="player" autoplay loop>
+      <source src="https://undangankuu.com/music/PeterCetera_CrystalBernard_IWannaTakeForeverTonight.mp3" type="audio/mpeg">
+    </audio>
 
-      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-    
-            <div class="container">
-              <div class="carousel-caption text-start">
-                <h1>Example headline.</h1>
-                <p>Some representative placeholder content for the first slide of the carousel.</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-    
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Another example headline.</h1>
-                <p>Some representative placeholder content for the second slide of the carousel.</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-    
-            <div class="container">
-              <div class="carousel-caption text-end">
-                <h1>One more for good measure.</h1>
-                <p>Some representative placeholder content for the third slide of this carousel.</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-              </div>
-            </div>
+    <button class="style play-btn" onclick="playPause()"></button>  		
+    <button class="style pause-btn" onclick="playPause()"></button>
+      
+    <!-- START HOME -->
+    <section class="jumbotron">
+      <div class="container banner" id="beranda" >
+        <div class="row text-center" style="padding-top: 4rem;">
+          <div class="clearfix pt-3 colom1">
+            <img src="/assets/images/object/bbhome.png" class="img-fluid col-md-5 float-md-start mb-2 crop-img"/>
+            <br>
+            <br>
+            <h1 style="font-size: 80px; font-family: Franklin Gothic Medium; color: rgb(48, 130, 253);">
+              Welcome To S5I
+            </h1>
+            <h3 style="color: rgb(48, 130, 253); font-size: 25px;">Wake up and chase your dream's</h3>
+            <br>
+            <button type="button" class="btn btn-secondary btn-lg col-md-2 shadow" style="margin-left: 1rem; margin-right: 1rem;margin-top: 2rem; margin-bottom: 2rem;" data-bs-toggle="modal" data-tagVideo="https://www.youtube.com/embed/e3gEZ9QKD24" data-bs-target="#videoModal"><strong>Go Profile</strong></button>
+            <br>
+            <h7 style="color: rgb(48, 130, 253); font-size: 20px;">Are you absent today ?</h7>
+            <br>
+            <a href="https://sika.unindra.ac.id/login">
+              <button type="button" class="btn btn-success btn-lg col-md-3" style="margin-left: 2rem; margin-right: 2rem;"><strong>SIKA</strong></button>
+            </a>
+            <a href="#program">
+              <button type="button" class="btn btn-primary btn-lg col-md-3" style="margin-left: 2rem; margin-right: 2rem; margin-top: 1rem;"><strong>Schedule</strong></button>
+            </a>
+            
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
+      <svg xmln s="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#0099ff" fill-opacity="1" d="M0,64L60,64C120,64,240,64,360,96C480,128,600,192,720,186.7C840,181,960,107,1080,69.3C1200,32,1320,32,1380,32L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+      </svg>
+      </section>
+      <!-- END HOME -->
 
-    <script src="assets/bootstrap-5.1.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/jquery-3.6.0/jquery-3.6.0.slim.min.js"></script>
-    <script src="assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-    <!-- <script src="assets/DataTables/datatables.min.js"></script> -->
+      <!-- START ABOUT US -->
+      <section style="background-color:#0099ff ;">
+      <div class="container" id="tentangkami" style="padding-top: 1rem;">
+        <div class="row text-center mb-3">
+          <h2 class="display-3" style="padding-top: 5rem; color: aliceblue;">
+            <b>About S5I</b>
+          </h2>
+        </div>
+        <div class="row justify-content-between fs-5">
+          <div class="col-6">
+            <p style="text-align: justify; color: aliceblue;">We are student change agents for ourselves and society. Our dedication and devotion to the progress of the Indonesian state. Building our beloved homeland, continuing and realizing the ideals of the nation. Through the world of information technology, we are ready to build a country with a million dreams and actions. Ready to compete and develop is our form as a student agent of world change.
+            <br>  <br>A million dreams for our beloved country. Together we create for the welfare of the nation.
+
+            <br>From us to all of us and smart greetings.
+            <br><br>Dosen Pembimbing<h4> Ade Kurnia Solihin, M.Pd., M.Kom. and</h4>
+            </p>
+              <button type="button" class="btn btn-light btn-lg col-md-4 shadow-lg" style="margin-left: 2rem; margin-right: 2rem;margin-top: 2rem;" data-bs-toggle="modal" data-tagVideo="https://www.youtube.com/embed/R33vydrszgM" data-bs-target="#videoModal"><strong>Document</strong></button>
+            
+          </div>
+          <div class="col-6">
+            <img src="../assets/images/about-s5i.jpg" class="img-fluid img-thumbnail shadow-lg" alt="..." style="box-shadow: 0 0 80px 8px white inset;">
+          </div>
+        </div>
+      </div>
+     
+      </section>
+
+    
+      <!-- END ABOUT US -->
+
+       <!-- START SCHEDULE -->
+       <section>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,128L30,133.3C60,139,120,149,180,128C240,107,300,53,360,58.7C420,64,480,128,540,133.3C600,139,660,85,720,96C780,107,840,181,900,192C960,203,1020,149,1080,106.7C1140,64,1200,32,1260,48C1320,64,1380,128,1410,160L1440,192L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>
+      <div class="container-fluid program">
+        <div class="container text-center">
+          <h2 class="display-3" id="program" style="padding-top: 5rem;">
+            <b>Schedule</b>
+          </h2>
+          <div class="row pt-4">
+            <div class="col-md-3">
+              <span class="lingkaran shadow-lg"><i class="fas fa-book fa-5x"></i></span>  
+              <h3 class="mt-3">Interpersonal Skill</h3>
+              <p>Senin 17.00-19.30</p>
+              <a href="https://forms.gle/Q9vJG2RtfGXHJLYX7">
+                <button type="button" class="btn btn-primary btn-lg col-md-6 shadow" style="margin-left: 2rem; margin-right: 2rem; margin-top: 0.5rem; margin-bottom: 2rem;"><strong>Attendance</strong></button>
+              </a>
+            </div>
+            <div class="col-md-3">
+              <span class="lingkaran shadow-lg"><i class="fas fa-book fa-5x"></i></span>
+              <h3 class="mt-3">Kewirausahaan</h3>
+              <p>Senin 19.40-22.00</p>
+              <a href="https://classroom.google.com/c/Mzk0NjUzNTExNTQx">
+                <button type="button" class="btn btn-primary btn-lg col-md-6 shadow" style="margin-left: 2rem; margin-right: 2rem; margin-top: 0.5rem; margin-bottom: 2rem;"><strong>Attendance</strong></button>
+              </a>
+            </div>
+            <div class="col-md-3">
+              <span class="lingkaran shadow-lg"><i class="fas fa-book fa-5x"></i></i></span>
+              <h3 class="mt-3">Ilmu Sosial dan Budaya</h3>
+              <p>Selasa 17.00-19.30</p>
+              <a href="https://classroom.google.com/c/Mzk0Njk4MjM5MDgz">
+                <button type="button" class="btn btn-primary btn-lg col-md-6 shadow" style="margin-left: 2rem; margin-right: 2rem; margin-top: 0.5rem; margin-bottom: 2rem;"><strong>Attendance</strong></button>
+              </a>
+            </div>
+            <div class="col-md-3">
+              <span class="lingkaran shadow-lg"><i class="fas fa-book fa-5x"></i></i></span>
+              <h3 class="mt-3">Teori Bahasa Automata</h3>
+              <p>Selasa 19.30-22.00</p>
+              <a href="https://forms.gle/FW8mxNjg7cwqQAzs7">
+                <button type="button" class="btn btn-primary btn-lg col-md-6 shadow" style="margin-left: 2rem; margin-right: 2rem; margin-top: 0.5rem; margin-bottom: 2rem;"><strong>Attendance</strong></button>
+              </a>
+            </div>
+            <div class="col-md-3">
+              <span class="lingkaran shadow-lg"><i class="fas fa-book fa-5x"></i></span>
+              <h3 class="mt-3">Statistika Lanjut</h3>
+              <p>Senin 19.40-22.00</p>
+              <a href="https://docs.google.com/forms/d/18mEhOe3MQTdpenYCABx56qfWxBbCQl47fibSVcoOi2Y/edit?usp=drivesdk">
+                <button type="button" class="btn btn-primary btn-lg col-md-6 shadow" style="margin-left: 2rem; margin-right: 2rem; margin-top: 0.5rem; margin-bottom: 2rem;"><strong>Attendance</strong></button>
+              </a>
+            </div>
+            <div class="col-md-3">
+              <span class="lingkaran shadow-lg"><i class="fas fa-book fa-5x"></i></span>
+              <h3 class="mt-3">Pemrograman WEB Dasar</h3>
+              <p>Senin 19.40-22.00</p>
+              <a href="https://forms.gle/kC8ddCh49ytUxsho9">
+                <button type="button" class="btn btn-primary btn-lg col-md-6 shadow" style="margin-left: 2rem; margin-right: 2rem; margin-top: 0.5rem; margin-bottom: 2rem;"><strong>Attendance</strong></button>
+              </a>
+            </div>
+            <div class="col-md-3">
+              <span class="lingkaran shadow-lg"><i class="fas fa-book fa-5x"></i></span>
+              <h3 class="mt-3">Pemrograman Berorientasi Object</h3>
+              <p>Senin 19.40-22.00</p>
+              <a href="https://forms.gle/sMCQ4LdwUXZtUY2j8">
+                <button type="button" class="btn btn-primary btn-lg col-md-6 shadow" style="margin-left: 2rem; margin-right: 2rem; margin-top: 0.5rem; margin-bottom: 2rem;"><strong>Attendance</strong></button>
+              </a>
+            </div>
+            <div class="col-md-3">
+              <span class="lingkaran shadow-lg"><i class="fas fa-book fa-5x"></i></span>
+              <h3 class="mt-3">Sistem Operasi</h3>
+              <p>Senin 19.40-22.00</p>
+              <a href="https://forms.gle/ByT63Pj9tW3Gf2dX8">
+                <button type="button" class="btn btn-primary btn-lg col-md-6 shadow" style="margin-left: 2rem; margin-right: 2rem; margin-top: 0.5rem; margin-bottom: 2rem;"><strong>Attendance</strong></button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+       </section>
+      <!-- END SCHEDULE -->
+
+      <!-- START DAFTAR MAHASISWA -->
+      <div class="container kelas table-responsive">
+        <div class="text-center">
+          <h2 class="display-3" id="kelas" style="padding-top: 5rem;">
+            <b>Mahasiswa/i</b>
+          </h2>
+          <h4>We Are Agents Of Change</h4>
+          <br>
+        </div>
+        <table id="table_mahasiswa" class="table table-bordered table-striped table-hover">
+          <thead>
+              <tr class="text-center text-white bg-info bg-gradient">
+                  <th width="50px">NO</th>
+                  <th>NAMA</th>
+                  <th>NPM</th>
+                  <th>KELAS</th>
+                  <th>PRODI</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td class="text-center">1</td>
+                  <td>Abdul Hakim</td>
+                  <td>201943501267</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">2</td>
+                  <td>Abu Yajid Bustomi</td>
+                  <td>201943501282</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">3</td>
+                  <td>Adeng Nugraha</td>
+                  <td>201943501253</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">4</td>
+                  <td>Adrian Fachrezi</td>
+                  <td>201943501208</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">5</td>
+                  <td>Ahmad Malik Fajar Sutisna</td>
+                  <td>201943501294</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">6</td>
+                  <td>Ahmad Masruri</td>
+                  <td>201943501276</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">7</td>
+                  <td>Ahmad Sultoni</td>
+                  <td>201943501277</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">8</td>
+                  <td>Aldi Fachreza Sutriawan</td>
+                  <td>201943501243</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">9</td>
+                  <td>Andi Ami</td>
+                  <td>201943501259</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">10</td>
+                  <td>Arief Rahman Hakim</td>
+                  <td>201943501300</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">11</td>
+                  <td>Ayulia Sartika Mansyur</td>
+                  <td>201943501289</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">12</td>
+                  <td>Dhika Fernanda</td>
+                  <td>201943501248</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">13</td>
+                  <td>Dhimas Ramadhan</td>
+                  <td>201943501304</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">14</td>
+                  <td>Dwi Wijayanti</td>
+                  <td>201943501227</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">15</td>
+                  <td>Eka Asriani</td>
+                  <td>201943501270</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">16</td>
+                  <td>Farhanah</td>
+                  <td>201943501212</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">17</td>
+                  <td>Farras Akbar</td>
+                  <td>201943501220</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">18</td>
+                  <td>Fauzi Maulana Habibi</td>
+                  <td>201943501203</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">19</td>
+                  <td>Handika Rulys Satrio</td>
+                  <td>201943501295</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">20</td>
+                  <td>Hasby Asshiddiqi</td>
+                  <td>201943501211</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">21</td>
+                  <td>Helen</td>
+                  <td>201943501252</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">22</td>
+                  <td>Iqbal Fatah Ramadhan</td>
+                  <td>201943501226</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">23</td>
+                  <td>Irwan Muji Handoko</td>
+                  <td>201943501254</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">24</td>
+                  <td>Isnaini Anwar Sanusi</td>
+                  <td>201943501275</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">25</td>
+                  <td>Jordy Ritzq</td>
+                  <td>201943501285</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">26</td>
+                  <td>M Abdul Rizal</td>
+                  <td>201943501273</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">27</td>
+                  <td>Mohammad Abdur Rahman</td>
+                  <td>201943501296</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">28</td>
+                  <td>Muhammad Insan Kamil</td>
+                  <td>201943501256</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">29</td>
+                  <td>Muhammad Randy Pratama</td>
+                  <td>201943501202</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">30</td>
+                  <td>Muhammad Ricky Ardiansyah</td>
+                  <td>201943501197</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">31</td>
+                  <td>Muni Sri Wulandari</td>
+                  <td>201943501291</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">32</td>
+                  <td>Nadia Tamara</td>
+                  <td>201943501287</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">33</td>
+                  <td>Nur Muhammad Rifai</td>
+                  <td>201943501293</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">34</td>
+                  <td>Putri Novita Sari</td>
+                  <td>201943501271</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">35</td>
+                  <td>Rati Romaito Silitonga</td>
+                  <td>201943501216</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">36</td>
+                  <td>Retno Tri Lestari</td>
+                  <td>201943501263</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">37</td>
+                  <td>Rizki Fajrian</td>
+                  <td>201943501279</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">38</td>
+                  <td>Royyan Ridwan</td>
+                  <td>201943501206</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">39</td>
+                  <td>Tasya Amelia</td>
+                  <td>201943501302</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>
+              <tr>
+                  <td class="text-center">40</td>
+                  <td>Vikri Sanjaya</td>
+                  <td>201943501258</td>
+                  <td>SI</td>
+                  <td>Teknik Informatika S1</td>
+              </tr>                        
+          </tbody>
+        </table>
+      </div>
+      <!-- END DAFTAR MAHASISWA -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,64L60,64C120,64,240,64,360,96C480,128,600,192,720,186.7C840,181,960,107,1080,69.3C1200,32,1320,32,1380,32L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>         
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,128L48,133.3C96,139,192,149,288,128C384,107,480,53,576,64C672,75,768,149,864,154.7C960,160,1056,96,1152,74.7C1248,53,1344,75,1392,85.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+         
+      <!-- START TEAM -->
+      <div class="container-fluid staff">
+        <div class="container text-center">
+          <h2 class="display-3" id="team">
+            <b>Created By</b>
+          </h2>
+          <br>          
+          <div class="row pt-3">
+            <div class="col-md-4">
+              <a href="https://wa.me/6282242362853?text=Hi Irwan..."><button type="button" class="btn btn-outline-none"><img class="lingkaran shadow-lg" src="../assets/images/team/irwan.jpg" alt="Dimas">
+                <!-- <span class="lingkaran"><i class="fas fa-quran fa-5x"></i></span> -->
+                <h3 class="mt-4">Irwan Muji Handoko</h3>
+                <p>201943501254</p></button></a>
+            </div>
+            <div class="col-md-4">
+              <a href="https://wa.me/6285776509645?text=Hi Fauzi..."><button type="button" class="btn btn-outline-none"><img class="lingkaran shadow-lg" src="../assets/images/team/fauzi.jpg" alt="Dimas">
+              <!-- <span class="lingkaran"><i class="fab fa-confluence fa-5x"></i></span> -->
+              <h3 class="mt-4">Fauzi Maulana Habibi</h3>
+              <p>201943501203</p></button></a>
+            </div>
+            <div class="col-md-4">
+              <a href="https://wa.me/6287781501454?text=Hi Dimas..."><button type="button" class="btn btn-outline-none"><img class="lingkaran shadow-lg" src="../assets/images/team/dimas.jpg" alt="Dimas">
+              <!-- <span class="lingkaran"><i class="fas fa-quran fa-5x"></i></span> -->
+              <h3 class="mt-4">Dimas Ramadhan</h3>
+              <p>201943501304</p></button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END TEAM -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,192L1440,288L1440,0L0,0Z"></path></svg>
+
+    <!-- START CONTACT -->
+    <div class="container-fluid contact">
+      <div class="container">
+        <h2 class="display-3 text-center" id="contact-us">
+          <b>Contact Us</b>
+        </h2>
+        <br>          
+        <form style="margin-left: auto; margin-right: auto; width: 50%;">
+          <div class="mb-3">
+            <label for="exampleInputName" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="exampleInputName">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Your Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Your Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+    <!-- END CONTACT -->
+
+    <!-- START FOOTER -->
+    <footer class="text-center"  style="background-color: rgb(48, 130, 253); padding: 10px 0 5px 0;">
+      <p class="text-white">&copy; 2019–2021 | University Of Indraprasta PGRI</p>
+    </footer>
+    <!-- END FOOTER -->
+
+    <!-- MODAL -->
+    <div class="modal fade" id="videoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="ratio ratio-16x9">
+              <iframe src="" allow="autoplay;" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- AKHIR MODAL -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="../assets/jquery-3.6.0/jquery-3.6.0.slim.min.js"></script>
+    <!-- JQuery -->
+    <script type="text/javascript" src="../assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <!-- JS DataTables -->
+    <script type="text/javascript" src="../assets/DataTables-bs5/datatables.min.js"></script>
+
+    <script>
+			function playPause() {
+			    var mediaPlayer = document.getElementById('player');
+			    if (mediaPlayer.paused) {
+			        mediaPlayer.play(); 
+			        $('.pause-btn').show();
+			        $('.play-btn').hide();
+			    } else {
+			        mediaPlayer.pause(); 
+			        $('.play-btn').show();
+			        $('.pause-btn').hide();
+			    }
+			}
+		</script>
+
+    <script>
+      $(function () {
+        $("#table_mahasiswa").DataTable({
+          "responsive" : true,
+          "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+          dom: "<'row'<'col-sm-12'B>>" +
+                "<'row'<'col-sm-6'l><'col-sm-6'f>>" +
+                "<'row'<'col-sm-12'tr>>" +
+                "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+                "buttons": [
+                  {"text":'Download Button :', "className": 'button-datatables' },
+                  { "extend": 'copy', "text":'<i class="fad fa-copy"></i> Copy' , "className": 'button-datatables-file' },
+                  { "extend": 'csv', "text":'<i class="fad fa-file-csv"></i> Csv' , "className": 'button-datatables-file' },
+                  { "extend": 'excel', "text":'<i class="fad fa-file-excel"></i> Excel' , "className": 'button-datatables-file' },
+                  { "extend": 'pdf', "text":'<i class="fad fa-file-pdf"></i> Pdf' , "className": 'button-datatables-file' },
+                  { "extend": 'print', "text":'<i class="fad fa-print"></i> Print' , "className": 'button-datatables-file' }
+                ]}).buttons().container().appendTo('#example1_wrapper .col-sm-6:eq(0)');
+     });
+    </script>
+    
+    <!-- JS MODAL -->
+
+    <script>
+            function autoPlayYouTubeModal() {
+        var triggerOpen = $("body").find('[data-tagVideo]');
+        triggerOpen.click(function() {
+          var theModal = $(this).data("bs-target"),
+            videoSRC = $(this).attr("data-tagVideo"),
+            videoSRCauto = videoSRC + "?autoplay=1";
+          $(theModal + ' iframe').attr('src', videoSRCauto);
+          $(theModal + ' button.btn-close').click(function() {
+            $(theModal + ' iframe').attr('src', videoSRC);
+          });
+        });
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+        autoPlayYouTubeModal();
+      });
+    </script>
+
+    <!-- JS MODAL -->
 </body>
 </html>
