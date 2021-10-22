@@ -16,8 +16,7 @@
   
   <style>
     .button-datatables-file{
-      background-color: seagreen;
-      margin-bottom: 10px;
+      background-color: seagreen;      margin-bottom: 10px;
       margin-right: 2px;
       border: none;
       border-radius: 10px;
@@ -118,28 +117,51 @@
       <!-- END HOME -->
 
       <!-- START ABOUT US -->
+      <section style="background-color:#0099ff ;">
       <div class="container" id="tentangkami" style="padding-top: 1rem;">
         <div class="row text-center mb-3">
-          <h2 class="display-3" style="padding-top: 5rem;">
+          <h2 class="display-3" style="padding-top: 5rem; color: aliceblue;">
             <b>About S5I</b>
           </h2>
         </div>
         <div class="row justify-content-between fs-5">
           <div class="col-6">
-            <p style="text-align: justify;">We are student change agents for ourselves and society. Our dedication and service for the progress of the Indonesian state. Building our beloved homeland, continuing and realizing the ideals of the nation. Through the world of information technology, we are ready to build a country with a million dreams and actions. Ready to compete and evolve is our alertness as a student agent of world change.
+            <p style="text-align: justify; color: aliceblue;">We are student change agents for ourselves and society. Our dedication and service for the progress of the Indonesian state. Building our beloved homeland, continuing and realizing the ideals of the nation. Through the world of information technology, we are ready to build a country with a million dreams and actions. Ready to compete and evolve is our alertness as a student agent of world change.
             <br>  <br> Million dreams for our beloved country. Together to create for the welfare of the nation.
 
             <br>  <br> Greetings smart and noble behavior.</p>
-            <!-- <p>Dreams... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore blanditiis autem error ullam deserunt iusto molestiae eaque voluptates necessitatibus distinctio.</p> -->
+           
+              <button type="button" class="btn btn-light btn-lg col-md-3" style="margin-left: 2rem; margin-right: 2rem;margin-top: 2rem;" data-bs-toggle="modal" data-tagVideo="https://www.youtube.com/embed/vbDt_AsFe-0" data-bs-target="#videoModal"><strong>Profile</strong></button>
+            
           </div>
           <div class="col-6">
-            <img src="../assets/images/about-s5i.jpg" class="img-fluid" alt="..." style="box-shadow: 0 0 80px 8px white inset; box-shadow: #21633e;">
+            <img src="../assets/images/about-s5i.jpg" class="img-fluid img-thumbnail" alt="..." style="box-shadow: 0 0 80px 8px white inset; box-shadow: #21633e;">
+          </div>
+        </div>
+      </div>
+     
+      </section>
+
+      <!-- modal -->
+      <div class="modal fade" id="videoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true" style="margin: 4rem;">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="ratio ratio-16x9">
+                <iframe src="" allow="autoplay;" allowfullscreen></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <!-- END ABOUT US -->
 
        <!-- START SCHEDULE -->
+       <section>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,128L30,133.3C60,139,120,149,180,128C240,107,300,53,360,58.7C420,64,480,128,540,133.3C600,139,660,85,720,96C780,107,840,181,900,192C960,203,1020,149,1080,106.7C1140,64,1200,32,1260,48C1320,64,1380,128,1410,160L1440,192L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>
       <div class="container-fluid program">
         <div class="container text-center">
           <h2 class="display-3" id="program" style="padding-top: 5rem;">
@@ -213,6 +235,7 @@
           </div>
         </div>
       </div>
+       </section>
       <!-- END SCHEDULE -->
 
       <!-- START DAFTAR MAHASISWA -->
@@ -629,5 +652,31 @@
                 ]}).buttons().container().appendTo('#example1_wrapper .col-sm-6:eq(0)');
      });
     </script>
+    
+    <!-- MODAL VIDEO -->
+
+    <script>
+      function autoPlayYouTubeModal() {
+  var triggerOpen = $("body").find('[data-tagVideo]');
+  triggerOpen.click(function() {
+    var theModal = $(this).data("bs-target"),
+      videoSRC = $(this).attr("data-tagVideo"),
+      videoSRCauto = videoSRC + "?autoplay=1";
+    $(theModal + ' iframe').attr('src', videoSRCauto);
+    $(theModal + ' button.btn-close').click(function() {
+      $(theModal + ' iframe').attr('src', videoSRC);
+    });
+  });
+}
+    </script>
+  
+      <script>
+  $(document).ready(function() {
+    autoPlayYouTubeModal();
+  });
+
+    </script>
+
+    <!-- AKHIR MODAL -->
 </body>
 </html>

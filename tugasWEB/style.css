@@ -2,15 +2,18 @@
     padding-top: 2px;
 
 }
-.navbar{
+
+.navbar {
     color: #26e6bc;
 }
+
 .banner {
     padding-top: 1%;
     color: #f8fbff;
 }
-.jumbotron{
-    
+
+.jumbotron {
+
     background-color: #ffffff;
 }
 
@@ -53,6 +56,7 @@
 .card {
     object-fit: cover;
 }
+
 .p {
     padding-bottom: 10%;
 }
@@ -77,10 +81,10 @@
     background: rgba(0, 0, 0, 0.5);
     animation: pulse 2s ease infinite;
 }
-  
+
 .play-btn {
     background-image: url(../assets/images/btn/play.png);
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;
     background-position: center;
     background-size: 30px 30px;
     position: fixed;
@@ -97,10 +101,10 @@
     border-radius: 4px;
     display: none;
 }
-  
+
 .pause-btn {
     background-image: url(../assets/images/btn/pause.png);
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;
     background-position: center;
     background-size: 30px 30px;
     position: fixed;
@@ -115,33 +119,43 @@
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     border-radius: 4px;
-  /*  -webkit-border-radius: 50%;
+    /*  -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%;*/
 }
-  
+
 .play-btn:hover,
 .pause-btn:hover {
     background-color: RoyalBlue;
     transform: scale(1.1);
 }
+
 @media screen and (max-width: 768px) {
-    .pause-btn, .play-btn {
-      bottom: 20px;
-      left: 20px;
+
+    .pause-btn,
+    .play-btn {
+        bottom: 20px;
+        left: 20px;
     }
 }
+
 @media screen and (max-width: 992px) {
-    .pause-btn, .play-btn {
-      bottom: 20px;
-      left: 20px;
+
+    .pause-btn,
+    .play-btn {
+        bottom: 20px;
+        left: 20px;
     }
 }
+
 @media screen and (max-width: 1024px) {
-    .pause-btn, .play-btn {
-      bottom: 20px;
-      left: 20px;
+
+    .pause-btn,
+    .play-btn {
+        bottom: 20px;
+        left: 20px;
     }
 }
-  /* END Syle Music Button */
+
+/* END Syle Music Button */
