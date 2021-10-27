@@ -1,5 +1,5 @@
 .navbar-brand {
-    padding-top: 2px;
+    padding-top: 1px;
 
 }
 
@@ -83,7 +83,7 @@
 }
 
 .play-btn {
-    background-image: url(../assets/images/btn/play.png);
+    background-image: url(assets/images/btn/play.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30px 30px;
@@ -103,7 +103,7 @@
 }
 
 .pause-btn {
-    background-image: url(../assets/images/btn/pause.png);
+    background-image: url(assets/images/btn/pause.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30px 30px;
